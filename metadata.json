@@ -1,0 +1,6 @@
+{
+  "name": "7-Delivery Redesign & Auto-Stock",
+  "description": "ระบบสั่งซื้อสินค้า 7-Eleven รูปแบบใหม่ UI สะอาดตา ปักหมุดระบุที่อยู่แม่นยำ พร้อมระบบตัดสต๊อกอัตโนมัติแบบเรียลไทม์",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

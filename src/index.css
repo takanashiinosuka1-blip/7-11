@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F6F6F3;
+    color: #0F172A;
+  }
+}
+
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-enter] {
+  animation: heroEnter 360ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.taste-card {
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms ease;
+}
+
+.taste-card:hover {
+  transform: translateY(-2px);
+}
+
+.taste-photo {
+  transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .taste-photo {
+  transform: scale(1.025);
+}
+
+.taste-btn {
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), background-color 140ms ease;
+}
+
+.taste-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.taste-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-enter],
+  .taste-card,
+  .taste-photo,
+  .taste-btn {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
